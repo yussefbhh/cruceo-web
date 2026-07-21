@@ -3,6 +3,17 @@
    STYLE V1
 ========================================== */
 
+:root{
+    --warm-bg:#F7F2EA;
+    --ink:#242322;
+    --soft-ink:#625C58;
+    --brown:#763D2D;
+    --green:#81904C;
+    --green-dark:#556438;
+    --green-soft:#EEF2DE;
+    --line:#D8C9C0;
+}
+
 *{
     margin:0;
     padding:0;
@@ -15,8 +26,8 @@ html{
 
 body{
     font-family:'Manrope',sans-serif;
-    background:#F7F2EA;
-    color:#242322;
+    background:var(--warm-bg);
+    color:var(--ink);
     overflow-x:hidden;
 }
 
@@ -42,7 +53,7 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(247,242,234,.86);
+    background:rgba(247,242,234,.88);
     backdrop-filter:blur(16px);
     z-index:999;
     border-bottom:1px solid rgba(0,0,0,.04);
@@ -52,19 +63,19 @@ header{
     display:flex;
     align-items:center;
     gap:16px;
-    color:#242322;
+    color:var(--ink);
     font-size:38px;
     font-weight:800;
     letter-spacing:7px;
 }
 
 .logo img{
-    width:58px;
-    height:58px;
+    width:56px;
+    height:56px;
     object-fit:cover;
     border-radius:16px;
     flex-shrink:0;
-    box-shadow:0 14px 30px rgba(118,61,45,.16);
+    box-shadow:0 14px 30px rgba(85,100,56,.18),0 8px 22px rgba(118,61,45,.12);
 }
 
 .logo span{
@@ -72,7 +83,7 @@ header{
 }
 
 .download-btn{
-    background:#763D2D;
+    background:var(--brown);
     color:white;
     padding:16px 30px;
     border-radius:100px;
@@ -82,7 +93,8 @@ header{
 
 .download-btn:hover{
     transform:translateY(-3px);
-    box-shadow:0 18px 40px rgba(118,61,45,.25);
+    background:var(--green-dark);
+    box-shadow:0 18px 40px rgba(85,100,56,.22);
 }
 
 /* ==========================================
@@ -100,16 +112,6 @@ header{
 
 .hero-text{max-width:640px;}
 
-.mini{
-    display:inline-block;
-    color:#763D2D;
-    font-weight:700;
-    font-size:14px;
-    letter-spacing:1px;
-    line-height:1.8;
-    margin-bottom:35px;
-}
-
 .hero h1{
     font-size:82px;
     line-height:.95;
@@ -117,9 +119,31 @@ header{
     margin-bottom:28px;
 }
 
-.hero p{
+.cruceo-definition{
+    max-width:590px;
+    margin-bottom:28px;
+    padding-left:22px;
+    border-left:3px solid var(--green);
+}
+
+.cruceo-definition span{
+    display:block;
+    color:var(--green-dark);
+    font-size:17px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.cruceo-definition p{
+    color:var(--soft-ink);
+    font-size:21px;
+    line-height:1.65;
+}
+
+.brand-line{
+    color:var(--brown);
     font-size:24px;
-    color:#625C58;
+    font-weight:700;
     line-height:1.7;
     max-width:520px;
 }
@@ -139,19 +163,24 @@ header{
 }
 
 .primary{
-    background:#763D2D;
+    background:var(--green-dark);
     color:#fff;
 }
 .primary:hover{
     transform:translateY(-4px);
-    box-shadow:0 22px 45px rgba(118,61,45,.28);
+    background:var(--brown);
+    box-shadow:0 22px 45px rgba(118,61,45,.24);
 }
 
 .secondary{
-    border:2px solid #D8C9C0;
-    color:#242322;
+    border:2px solid var(--line);
+    color:var(--ink);
 }
-.secondary:hover{background:#fff;}
+.secondary:hover{
+    background:#fff;
+    border-color:rgba(129,144,76,.45);
+    color:var(--green-dark);
+}
 
 .hero-phone{display:flex;justify-content:center;}
 .hero-phone img{
@@ -171,19 +200,19 @@ header{
 .how h2{font-size:56px;text-align:center;margin-bottom:80px;font-weight:800;}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:35px;}
 .step{background:#FAF8F4;border-radius:18px;padding:45px 35px;transition:.35s;border:1px solid rgba(36,35,34,.06);}
-.step:hover{transform:translateY(-8px);box-shadow:0 25px 45px rgba(0,0,0,.08);}
-.step span{font-size:15px;font-weight:800;color:#763D2D;letter-spacing:2px;}
+.step:hover{transform:translateY(-8px);box-shadow:0 25px 45px rgba(85,100,56,.11);}
+.step span{font-size:15px;font-weight:800;color:var(--green-dark);letter-spacing:2px;}
 .step h3{margin:18px 0;font-size:28px;line-height:1.2;}
 .step p{color:#666;line-height:1.8;font-size:17px;}
 
-.message{padding:170px 10%;text-align:center;background:#F7F2EA;}
+.message{padding:170px 10%;text-align:center;background:var(--warm-bg);}
 .message h2{font-size:70px;font-weight:800;line-height:1.1;margin-bottom:30px;}
-.message p{font-size:26px;color:#625C58;max-width:760px;margin:auto;line-height:1.8;}
+.message p{font-size:26px;color:var(--soft-ink);max-width:760px;margin:auto;line-height:1.8;}
 
-.cta{padding:170px 8%;text-align:center;background:#242322;color:#fff;}
+.cta{padding:170px 8%;text-align:center;background:var(--ink);color:#fff;}
 .cta h2{font-size:64px;max-width:900px;margin:0 auto 50px;line-height:1.1;}
-.cta .primary{background:#fff;color:#763D2D;display:inline-block;}
-.cta .primary:hover{background:#F7F2EA;}
+.cta .primary{background:#fff;color:var(--brown);display:inline-block;}
+.cta .primary:hover{background:var(--green-soft);color:var(--green-dark);}
 
 footer{background:#191817;color:#fff;padding:80px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;}
 footer div:first-child{font-size:30px;font-weight:800;letter-spacing:5px;}
@@ -195,7 +224,8 @@ footer div:last-child{color:#D6D6D6;font-size:15px;}
 @media(max-width:1100px){
 .hero{grid-template-columns:1fr;text-align:center;gap:70px;}
 .hero-text{max-width:100%;}
-.hero p{margin:auto;}
+.cruceo-definition{margin-left:auto;margin-right:auto;text-align:left;}
+.brand-line{margin:auto;}
 .hero-buttons{justify-content:center;}
 .hero-phone img{width:320px;}
 .steps{grid-template-columns:repeat(2,1fr);}
@@ -210,7 +240,9 @@ header{padding:22px;}
 .download-btn{display:none;}
 .hero{padding:150px 24px 90px;}
 .hero h1{font-size:52px;}
-.hero p{font-size:20px;}
+.cruceo-definition{padding-left:18px;margin-bottom:24px;}
+.cruceo-definition p{font-size:18px;}
+.brand-line{font-size:20px;}
 .hero-phone img{width:270px;}
 .how{padding:90px 24px;}
 .how h2{font-size:42px;margin-bottom:55px;}
@@ -226,7 +258,10 @@ footer{flex-direction:column;text-align:center;}
 
 @media(max-width:480px){
 .hero h1{font-size:42px;}
-.hero p{font-size:18px;}
+.cruceo-definition{padding-left:16px;}
+.cruceo-definition span{font-size:15px;}
+.cruceo-definition p{font-size:17px;}
+.brand-line{font-size:18px;}
 .primary,.secondary{width:100%;text-align:center;}
 .hero-phone img{width:230px;}
 .message h2,.cta h2{font-size:34px;}
