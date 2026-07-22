@@ -198,12 +198,14 @@ header{
 
 .how{padding:140px 8%;background:#fff;}
 .how h2{font-size:56px;text-align:center;margin-bottom:80px;font-weight:800;}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:35px;}
-.step{background:#FAF8F4;border-radius:18px;padding:45px 35px;transition:.35s;border:1px solid rgba(36,35,34,.06);}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;}
+.step{background:#FAF8F4;border-radius:18px;padding:38px 26px;transition:.35s;border:1px solid rgba(36,35,34,.06);}
 .step:hover{transform:translateY(-8px);box-shadow:0 25px 45px rgba(85,100,56,.11);}
 .step span{font-size:15px;font-weight:800;color:var(--green-dark);letter-spacing:2px;}
-.step h3{margin:18px 0;font-size:28px;line-height:1.2;}
+.step h3{margin:18px 0;font-size:24px;line-height:1.22;}
 .step p{color:#666;line-height:1.8;font-size:17px;}
+.step-feature{background:linear-gradient(180deg,var(--green-soft),#FAF8F4);border-color:rgba(129,144,76,.24);}
+.step-feature span{color:var(--brown);}
 
 .message{padding:170px 10%;text-align:center;background:var(--warm-bg);}
 .message h2{font-size:70px;font-weight:800;line-height:1.1;margin-bottom:30px;}
@@ -229,6 +231,7 @@ footer div:last-child{color:#D6D6D6;font-size:15px;}
 .hero-buttons{justify-content:center;}
 .hero-phone img{width:320px;}
 .steps{grid-template-columns:repeat(2,1fr);}
+.step-feature{grid-column:1/-1;}
 .message h2{font-size:54px;}
 .cta h2{font-size:52px;}
 }
@@ -247,6 +250,7 @@ header{padding:22px;}
 .how{padding:90px 24px;}
 .how h2{font-size:42px;margin-bottom:55px;}
 .steps{grid-template-columns:1fr;}
+.step-feature{grid-column:auto;}
 .step{padding:35px;}
 .message{padding:120px 24px;}
 .message h2{font-size:42px;}
